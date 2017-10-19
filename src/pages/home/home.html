@@ -10,6 +10,18 @@
     </button>
     <ion-title>Poupa Junto</ion-title>
   </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="Ativas">
+      <ion-segment-button value="Ativas">
+        Ativas
+      </ion-segment-button>
+      <ion-segment-button value="Encerradas">
+        Encerradas
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
@@ -29,6 +41,11 @@
       {{ Poupanca.nome }}
     </ion-item>
   </ion-list>
-
-
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button full botton (click)="nova()">Nova Poupança</button>
+  </ion-toolbar>
+</ion-footer>

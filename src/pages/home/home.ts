@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 
 import { PoupancaPage } from '../poupanca/poupanca';
+import { NovaPoupancaPage } from '../nova-poupanca/nova-poupanca';
 
 
 @Component({
@@ -80,4 +81,9 @@ export class HomePage implements OnInit {
 	editar(Poupanca) {
 		this.navCtrl.push(PoupancaPage, { PoupancaSelecionada: Poupanca});
 	}
+
+	nova() {
+		this.navCtrl.push(NovaPoupancaPage);
+	}
+
 }

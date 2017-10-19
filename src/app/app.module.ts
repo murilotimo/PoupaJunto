@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import { PoupancaPage } from '../pages/poupanca/poupanca';
+import { NovaPoupancaPage } from '../pages/nova-poupanca/nova-poupanca';
+import { AddParticipantesPage } from '../pages/add-participantes/add-participantes';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,6 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     PoupancaPage,
+    NovaPoupancaPage,
+    AddParticipantesPage
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     PoupancaPage,
+    NovaPoupancaPage,
+    AddParticipantesPage
   ],
   providers: [
     StatusBar,
