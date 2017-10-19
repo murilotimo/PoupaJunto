@@ -27,12 +27,26 @@
 <ion-content>
 
   <h5>Minhas Poupanças</h5>
-
+  <ion-card> 
   <ion-list>
-    <ion-item *ngFor="let Poupanca of PoupancasMinhas" (click)="editar(Poupanca)">
-      {{ Poupanca.nome }}
-    </ion-item>
-  </ion-list>
+      <ion-item *ngFor="let Poupanca of PoupancasMinhas" (click)="editar(Poupanca)">
+      <h3>{{ Poupanca.nome }}</h3>
+      <h5>Meta: R$ {{ Poupanca.meta }} | 
+        <span> R$ {{ Poupanca.saldo }}</span>
+      </h5> 
+      <ion-avatar item-end>
+        <img src="assets/img/venkman.jpg" >
+      </ion-avatar>
+      <ion-avatar item-end>
+        <img src="assets/img/spengler.jpg" >
+      </ion-avatar>
+      <div clear>
+        <h6 float-right >Todo dia 21</h6>
+      </div>
+
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
   <h5>Poupanças de Amigos</h5>
 

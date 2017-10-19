@@ -14,6 +14,48 @@
 
 
 <ion-content padding>
+	<ion-card>
+	
+	  <ion-card-header>
+	    Quantas vezes?
+	  </ion-card-header>
+	
+	  <ion-card-content>
+		  <ion-segment>
+		    <ion-segment-button value="unica">
+		      Única
+		    </ion-segment-button>
+		    <ion-segment-button value="semanal">
+		      Semanal
+		    </ion-segment-button>
+		    <ion-segment-button value="mensal">
+		      Mensal
+		    </ion-segment-button>
+		  </ion-segment>	    
+	  </ion-card-content>
+	
+	</ion-card>
+
+	<ion-card>
+	  <ion-card-content>
+		  <ion-item>
+		    <ion-label floating>Nome da Poupança</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>	  	
+	  </ion-card-content>
+	</ion-card>
+
+	<ion-card >
+	  <ion-card-content>
+		  <ion-item>
+		    <ion-label stacked>Meta</ion-label>
+		    <ion-input type="text" placeholder="R$ 0,00"></ion-input>
+		  </ion-item>
+		<ion-item>
+  			<ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range>
+  		</ion-item>	  	
+	  </ion-card-content>
+	</ion-card>
 
 </ion-content>
 

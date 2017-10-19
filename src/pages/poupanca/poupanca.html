@@ -31,14 +31,26 @@
 	
 	</ion-card>
 
-	<ion-list>
-		<ion-item *ngFor="let Participante of Poupanca.participantes">
-			<ion-icon ios="ios-{{ Participante.foto }}" md="md-{{ Participante.foto }}" item-left ></ion-icon>
+	<ion-card *ngFor="let Participante of Poupanca.participantes, let i=index" [ngClass]="{active: exibido(i)}">
+		<ion-card-content>
+
+			<ion-item>
+	    <ion-icon ios="ios-{{ Participante.foto }}" md="md-{{ Participante.foto }}" item-left ></ion-icon>
 			{{ Participante.nome }}
-			<span item-right>R$ 300,00</span>
-			<ion-icon name="more" item-right></ion-icon>
-		</ion-item>
-	</ion-list>
+		<span item-right>R$ 300,00</span>
+		<ion-icon name="more" item-right (click)="alternar(i)"></ion-icon>
+			</ion-item>
+		  	
+		  	<div *ngIf="exibido(i)">
+		  	<ion-item >
+				<ion-input placeholder="R$ 0,00"></ion-input>
+			</ion-item>
+			<ion-range  color="danger" pin="true">	</ion-range> 
+			</div>
+
+	  </ion-card-content>
+	
+	</ion-card>
 
 </ion-content>
 
